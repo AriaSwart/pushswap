@@ -47,5 +47,5 @@ void    ch_rev_rotate(i_list **lst)
     tmp = *lst->next;
     *lst->next = NULL;
     tmp->next = head;
-    lst = tmp;
+    *lst = tmp;
 }

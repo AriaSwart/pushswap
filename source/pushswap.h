@@ -2,6 +2,8 @@
 # define PUSHSWAP_H
 
 # include "../libft/libft.h"
+# include "ft_node.c"
+# include "operations.c"
 
 typedef  struct     n_list
 {
