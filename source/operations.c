@@ -1,5 +1,4 @@
 #include "pushswap.h"
-#include "ft_node.c"
 
 void    ch_swap(i_list **lst)
 {
