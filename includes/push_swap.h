@@ -22,5 +22,6 @@ void        ft_push(t_stack **src, t_stack **dest);
 void        ft_rotate(t_stack **src);
 void        ft_rev_rotate(t_stack **src);
 void        ft_doargs(t_stack **a, t_stack **b);
+void        ft_docommand(char *str, t_stack **a, t_stack **b);
 
 #endif
