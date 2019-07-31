@@ -1,3 +1,5 @@
+#include "push_swap.h"
+
 void ft_docommand(char *str, t_stack **a, t_stack **b)
 {
     if (ft_strequ(str, "sa") || ft_strequ(str, "ss"))

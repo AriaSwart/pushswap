@@ -1,8 +1,9 @@
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 t_stack  *ft_node(int n)
 {
    t_stack *node;
+
    node = (t_stack *)malloc(sizeof(t_stack));
    node->num = n;
    node->next = NULL;
@@ -11,6 +12,7 @@ t_stack  *ft_node(int n)
 void    ft_append(t_stack **alst, t_stack *node)
 {
    t_stack *lst;
+
    lst = *alst;
    if (*alst == NULL)
    {
