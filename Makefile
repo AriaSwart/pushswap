@@ -8,12 +8,14 @@ SOURCES = srcs/*.c
 
 OBJECTS = srcs/*.o
 
+LIB = libft/libft.a
+
 INCL =  includes/
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(SOURCES) -I $(INCL)
+	$(CC) $(CFLAGS) $(SOURCES) $(LIB) -I $(INCL)
 
 clean:
 	rm -f $(OBJECTS)
