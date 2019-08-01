@@ -13,7 +13,7 @@ INCL =  includes/
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) -c $(SOURCES) -I $(INCL)
+	$(CC) $(CFLAGS) $(SOURCES) -I $(INCL)
 
 clean:
 	rm -f $(OBJECTS)
