@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int main(void)
+int main(int argc, char **argv)
 {
     t_stack *a;
     t_stack *b;
@@ -8,9 +8,9 @@ int main(void)
 
     a=NULL;
     b=NULL;
-    i = -1;
-    while (++i < 10)
-    ft_append(&a, ft_node(i));
+    i = 0;
+    while (++i < argc)
+        ft_append(&a, ft_node(ft_atoi(argv[i])));
     while (1)
     {
         ft_doargs(&a, &b);

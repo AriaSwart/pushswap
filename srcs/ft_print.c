@@ -20,8 +20,12 @@ void ft_print(t_stack *a, t_stack *b)
             ft_putnbr(ptr_b->num);
             ptr_b = ptr_b->next;
         }
-        ft_putendl("");
+        ft_putchar('\n');
     }
     ft_putendl("-\t-");
     ft_putendl("A\tB");
+    if (ft_isascending(a) && b == NULL)
+        ft_putendl("Success");
+    else
+        ft_putendl("Failure");
 }
