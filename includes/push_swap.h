@@ -12,8 +12,8 @@ typedef struct      s_stack
 t_stack     *ft_node(int n);
 void        ft_append(t_stack **alst, t_stack *node);
 int         ft_listlen(t_stack **lst);
-int         ft_scanlist_ascending(t_stack *list);
-int         ft_scanlist_descending(t_stack *list);
+t_stack    *ft_scanlist_ascending(t_stack *list);
+t_stack    *ft_scanlist_descending(t_stack *list);
 void        ft_push(t_stack **src, t_stack **dest);
 void        ft_swap(t_stack **a);
 void        ft_rotate(t_stack **src);

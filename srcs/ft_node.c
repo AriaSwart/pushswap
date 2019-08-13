@@ -26,20 +26,3 @@ void    ft_append(t_stack **alst, t_stack *node)
    }
    lst->next = node;
 }
-
-int         ft_listlen(t_stack **lst)
-{
-    t_stack *temp;
-    int i;
-    
-    if (*lst == NULL)
-        return (0);
-    i = 1;
-    temp = *lst;
-    while (temp->next != NULL)
-    {
-        temp = temp->next;
-        i++;
-    }
-    return (i);
-}
