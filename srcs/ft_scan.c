@@ -54,5 +54,5 @@ t_stack *ft_scanlist_descending(t_stack *list)
         }
         tmp = tmp->next;
     } 
-    return (i);
+    return (data);
 }
