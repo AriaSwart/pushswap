@@ -24,7 +24,7 @@ void ft_print(t_stack *a, t_stack *b)
     }
     ft_putendl("-\t-");
     ft_putendl("A\tB");
-    if (ft_scanlist_ascending(a) == 0 && b == NULL)
+    if (ft_scanlist_ascending(a) == NULL && b == NULL)
         ft_putendl("Success");
     else
         ft_putendl("Failure");
