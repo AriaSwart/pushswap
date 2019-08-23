@@ -1,30 +1,37 @@
 #include "push_swap.h"
 
-int     ft_listlen(t_stack *lst)
+int     ft_listlen(t_stack **lst)
 {
     t_stack *temp;
     int i;
-    
-    if (lst == NULL)
-        return (0);
-    i = 1;
-    temp = lst;
-    while (temp->next != NULL)
+
+    if (lst)
     {
-        temp = temp->next;
-        i++;
+        i = 1;
+        temp = *lst;
+        while (temp->next)
+        {
+            ft_putnbr(temp->num);
+            ft_putstr("\n");
+            temp = temp->next;
+            i++;
+        if (temp == NULL)
+            break;
+        }
+        return (i);
     }
-    return (i);
+    return (0);
 }
 
-t_stack *ft_scanlist_ascending(t_stack *list)
+t_stack *ft_scanlist_ascending(t_stack **list)
 {
     t_stack *tmp;
     t_stack *data;
     int     i;
 
     i = 0;
-    tmp = list;
+    tmp = *list;
+    data = NULL;
     while (tmp->next != NULL)
     {
         if (tmp->num > tmp->next->num)
@@ -37,14 +44,15 @@ t_stack *ft_scanlist_ascending(t_stack *list)
     return (data);
 }
 
-t_stack *ft_scanlist_descending(t_stack *list)
+t_stack *ft_scanlist_descending(t_stack **list)
 {
     t_stack *tmp;
     t_stack *data;
     int     i;
 
     i = 0;
-    tmp = list;
+    tmp = *list;
+    data = NULL;
     while (tmp->next != NULL)
     {
         if (tmp->num < tmp->next->num)

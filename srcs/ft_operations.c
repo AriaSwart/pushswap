@@ -51,5 +51,5 @@ void    ft_swap(t_stack **a)
         (*a) = (*a)->next;
         tmp->next = (*a)->next;
         (*a)->next = tmp;
-    } 
+    }
 }
