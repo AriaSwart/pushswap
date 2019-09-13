@@ -57,6 +57,3 @@ int         ft_autocycle_b(t_stack **list)
                 }
     return (0);
 }
-
-//int         ft_autocycle(t_stack **a, t_stack **b)
-//{}
