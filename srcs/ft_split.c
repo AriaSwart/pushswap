@@ -69,7 +69,7 @@ static void ft_advanced_ra(t_stack **a)
     ft_putstr("ra ");
 }
 
-void    ft_advancedsplit(t_stack **a, t_stack **b)
+void    ft_mediansplit(t_stack **a, t_stack **b)
 {
     int     median;
     int     i;

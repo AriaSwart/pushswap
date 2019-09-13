@@ -19,7 +19,7 @@ void ft_docommand(char *str, t_stack **a, t_stack **b)
     if (ft_strequ(str, "rrb") || ft_strequ(str, "rrr"))
         ft_rev_rotate(b);
     if (ft_strequ(str, "auto"))
-        ft_advancedsplit(a, b);
+        ft_autocycle_a(a);
 }
 
 void ft_doargs(t_stack **a, t_stack **b)
@@ -34,4 +34,5 @@ void ft_doargs(t_stack **a, t_stack **b)
     arr = ft_strsplit(str, ' ');
     while (arr[++i])
         ft_docommand(arr[i], a, b);
+    ft_putchar('\n');
 }

@@ -23,6 +23,34 @@ int     ft_listlen(t_stack **lst)
     return (0);
 }
 
+int     ft_section_ascending(t_stack **start, t_stack *stop)
+{
+    t_stack *tmp;
+    
+    tmp = *start;
+    while (tmp != stop && tmp->next != NULL)
+    {
+        if (tmp->num > tmp->next->num)
+            return (0);
+        tmp = tmp->next;
+    }
+    return (1);
+}
+
+int     ft_section_descending(t_stack **start, t_stack *stop)
+{
+    t_stack *tmp;
+    
+    tmp = *start;
+    while (tmp != stop && tmp->next != NULL)
+    {
+        if (tmp->num < tmp->next->num)
+            return (0);
+        tmp = tmp->next;
+    }
+    return (1);
+}
+
 t_stack *ft_scanlist_ascending(t_stack **list)
 {
     t_stack *tmp;
